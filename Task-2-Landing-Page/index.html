@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OrthoNow | Book Orthopaedic Consultation</title>
+
+<style>
+body{
+margin:0;
+font-family: Arial, sans-serif;
+background:#f6f8fc;
+color:#1a1a1a;
+}
+
+/* HERO */
+.hero{
+background: linear-gradient(135deg, #0b5ed7, #4a90e2);
+color:white;
+padding:60px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-size:34px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:16px;
+opacity:0.9;
+max-width:600px;
+margin:0 auto;
+}
+
+/* TRUST BAR */
+.trust{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:20px;
+font-size:14px;
+opacity:0.9;
+}
+
+/* MAIN LAYOUT */
+.container{
+display:flex;
+justify-content:center;
+padding:40px 20px;
+}
+
+/* FORM CARD */
+.card{
+background:white;
+padding:25px;
+width:100%;
+max-width:420px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+position:sticky;
+top:20px;
+}
+
+h2{
+margin-top:0;
+text-align:center;
+}
+
+label{
+font-weight:bold;
+margin-top:12px;
+display:block;
+}
+
+input, select{
+width:100%;
+padding:10px;
+margin-top:5px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+button{
+width:100%;
+margin-top:20px;
+padding:12px;
+background:#0b5ed7;
+color:white;
+border:none;
+border-radius:6px;
+font-size:16px;
+cursor:pointer;
+transition:0.2s;
+}
+
+button:hover{
+background:#084298;
+transform:scale(1.02);
+}
+
+/* SECTIONS */
+section{
+padding:40px 20px;
+text-align:center;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+max-width:900px;
+margin:auto;
+}
+
+.feature-box{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* THANK YOU */
+#thankyou{
+display:none;
+text-align:center;
+padding:80px 20px;
+}
+
+#thankyou h2{
+font-size:28px;
+color:#0b5ed7;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+<h1>Expert Orthopaedic Care for Knee & Back Pain</h1>
+<p>Book your consultation in under 60 seconds with top orthopaedic specialists across 9 clinics in South India.</p>
+
+<div class="trust">
+<span>⭐ 4.8/5 Patient Rating</span>
+<span>🏥 9 Clinics</span>
+<span>👨‍⚕️ Expert Doctors</span>
+</div>
+</div>
+
+<!-- FORM -->
+<div class="container">
+
+<div class="card">
+
+<h2>Book Consultation</h2>
+
+<form id="consultationForm">
+
+<label>Full Name</label>
+<input type="text" id="name" required>
+
+<label>Phone Number</label>
+<input type="tel" id="phone" required>
+
+<label>Select Clinic</label>
+<select id="clinic">
+<option>Bengaluru - Indiranagar</option>
+<option>Bengaluru - Whitefield</option>
+<option>Chennai</option>
+<option>Hyderabad</option>
+</select>
+
+<button type="submit">Book Appointment</button>
+
+</form>
+
+</div>
+
+</div>
+
+<!-- FEATURES -->
+<section>
+<h2>Why Patients Choose OrthoNow</h2>
+
+<div class="features">
+
+<div class="feature-box">✔ Same Day Appointments</div>
+<div class="feature-box">✔ Experienced Specialists</div>
+<div class="feature-box">✔ Advanced Treatment Options</div>
+<div class="feature-box">✔ Trusted by 10,000+ Patients</div>
+
+</div>
+</section>
+
+<!-- REVIEWS -->
+<section>
+<h2>Patient Experience</h2>
+<p>⭐⭐⭐⭐⭐ 4.8 average rating from verified patients</p>
+</section>
+
+<!-- FAQ -->
+<section>
+<h2>Frequently Asked Questions</h2>
+<p><b>How soon can I get an appointment?</b><br>Usually within 24 hours</p>
+<p><b>Do I need referral?</b><br>No referral required</p>
+</section>
+
+<!-- THANK YOU -->
+<div id="thankyou">
+<h2>Thank You 🎉</h2>
+<p>Your appointment request is received.</p>
+<p>Our team will contact you shortly.</p>
+</div>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+
+document.getElementById("consultationForm").addEventListener("submit", function(e){
+e.preventDefault();
+
+let name = document.getElementById("name").value;
+let phone = document.getElementById("phone").value;
+let clinic = document.getElementById("clinic").value;
+
+// GTM EVENT (REALISTIC NAMING)
+window.dataLayer.push({
+event: "consultation_form_submit",
+form_name: "lead_form",
+user_name: name,
+user_phone: phone,
+clinic_selected: clinic
+});
+
+// UI UPDATE
+document.querySelector(".container").style.display = "none";
+document.querySelector(".hero").style.display = "none";
+document.getElementById("thankyou").style.display = "block";
+
+console.log("DataLayer pushed:", window.dataLayer);
+});
+</script>
+
+</body>
+</html>
