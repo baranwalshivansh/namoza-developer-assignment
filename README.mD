@@ -1,23 +1,26 @@
 # OrthoNow – Marketing Tracking & Landing Page Project
 
 ## Overview
+
 This project demonstrates a complete marketing tracking setup for OrthoNow including:
-- GTM event tracking design
-- GA4 funnel tracking
-- Google Ads conversion setup
-- Landing page with lead capture
-- CRM + WhatsApp integration architecture
+
+* GTM event tracking design
+* GA4 funnel tracking
+* Google Ads conversion setup
+* Landing page with lead capture
+* CRM + WhatsApp integration architecture
 
 ---
 
 ## Tech Stack
-- HTML
-- CSS
-- JavaScript
-- Google Tag Manager (concept)
-- Google Analytics 4 (concept)
-- HubSpot CRM (integration design)
-- Karix WhatsApp API (integration design)
+
+* HTML
+* CSS
+* JavaScript
+* Google Tag Manager (concept)
+* Google Analytics 4 (concept)
+* HubSpot CRM (integration design)
+* Karix WhatsApp API (integration design)
 
 ---
 
@@ -36,6 +39,7 @@ README.md
 ## How to Run
 
 Just open:
+
 ```
 Task-2-Landing-Page/index.html
 ```
@@ -46,14 +50,21 @@ No installation required.
 
 ## Features
 
-- Multi-step booking tracking using dataLayer
-- GA4 funnel tracking design
-- CRM integration logic (HubSpot)
-- WhatsApp automation (Karix)
-- Lead capture landing page
-- Conversion tracking setup
+* Multi-step booking tracking using dataLayer
+* GA4 funnel tracking design
+* CRM integration logic (HubSpot)
+* WhatsApp automation (Karix)
+* Lead capture landing page
+* Conversion tracking setup
+
+---
+
+## PageSpeed Performance Screenshot
+
+![PageSpeed Performance Report](assets/pagespeed.png)
 
 ---
 
 ## Author
+
 Marketing & Analytics Assignment Submission
