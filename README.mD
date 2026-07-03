@@ -61,7 +61,7 @@ No installation required.
 
 ## PageSpeed Performance Screenshot
 
-![PageSpeed Performance Report](assets/pagespeed.png)
+![PageSpeed Performance Report](assests/pagespeed.png)
 
 ---
 
